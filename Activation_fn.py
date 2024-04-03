@@ -38,3 +38,5 @@ axes[1, 1].set_title('Leaky ReLU')
 
 # Show the plots
 plt.show()
+
+# bug fixed in main branch file
