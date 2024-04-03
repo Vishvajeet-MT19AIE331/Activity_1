@@ -14,27 +14,12 @@ def relu(x):
 def leaky_relu(x):
   return np.maximum(0.01 * x, x)
 
-# Generate data for the plots
-x = np.linspace(-10, 10, 100)
+# Get data for the plots
+random_values = np.array([-3.5, -1.2, 0, 2.8, -4.1, 1.5, -0.7, 3.2, -2.4, 4.6])
 
-# Create the plots
-fig, axes = plt.subplots(2, 2, figsize=(10, 10))
-
-# Plot the sigmoid function
-axes[0, 0].plot(x, sigmoid(x))
-axes[0, 0].set_title('Sigmoid')
-
-# Plot the tanh function
-axes[0, 1].plot(x, tanh(x))
-axes[0, 1].set_title('Tanh')
-
-# Plot the ReLU function
-axes[1, 0].plot(x, relu(x))
-axes[1, 0].set_title('ReLU')
-
-# Plot the leaky ReLU function
-axes[1, 1].plot(x, leaky_relu(x))
-axes[1, 1].set_title('Leaky ReLU')
-
-# Show the plots
-plt.show()
+print('Output of tanh function for given values:', tanh(random_values))
+print()
+print('Output of ReLU function for given values:', relu(random_values))
+print()
+print('Output of leaky ReLU function for given values:', leaky_relu(random_values))
+print()
